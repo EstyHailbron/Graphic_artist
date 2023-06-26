@@ -1,0 +1,27 @@
+
+.allFeedback {
+    display: flex;
+    flex-direction: column;
+    padding-left: 12%;
+}
+
+.feedback {
+    display: grid;
+    grid-template-columns: 20% 50% 10% auto;
+}
+hr{
+    border-top-color: black !important; 
+}
+.addResponseButton{
+   align-items: center;
+}
+#highlight{
+    display: flex;
+    flex-direction: column;
+    padding-left: 12%;
+    padding-right: 50%;
+    font-size:70px;
+    margin:20px;
+}
+
+

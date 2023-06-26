@@ -1,0 +1,57 @@
+
+<div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+    <h2 class="w3-wide w3-center">CONTACT</h2>
+    <p class="w3-opacity w3-center"><i>Fan? Drop a note!</i></p>
+    <div class="w3-row w3-padding-32">
+        <div class="w3-col m6 w3-large w3-margin-bottom">
+            <i class="fa fa-map-marker" style="width:30px"></i>Modiin Ilit, Israel<br>
+            <i class="fa fa-phone" style="width:30px"></i> Phone: +00 058-928-5292<br>
+            <i class="fa fa-envelope" style="width:30px"> </i> Email: mirala45@mail.com<br>
+        </div>
+        <div class="w3-col m6">
+            <form action="/action_page.php" target="_blank" (ngSubmit)="onSubmit()" #ContactUsForm="ngForm">
+                <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+                    <div class="w3-half">
+                        <input class="w3-input w3-border" type="text" #name="ngModel" [(ngModel)]="contentForm.name"
+                            required name="name" placeholder="name">
+                    </div>
+                    <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+                        Name is required
+                    </div>
+                    <div class="w3-half">
+                        <input class="w3-input w3-border" type="text" #mail="ngModel" [(ngModel)]="contentForm.mail"
+                            required name="mail" placeholder="mail">
+                    </div>
+                    <div [hidden]="mail.valid || mail.pristine" class="alert alert-danger">
+                        mail is required
+                    </div>
+                </div>
+                <input class="w3-input w3-border" type="text" #Message="ngModel" [(ngModel)]="contentForm.content" required name="Message" placeholder="Message" >
+
+
+                <!-- <div >
+                <div class="w3-input w3-border">
+                   
+        
+                        <select class="form-control" name="category" #category="ngModel" [(ngModel)]="contentForm.category">
+                            <option>{{CategoryEnum.Albums}}</option>
+                            <option>{{CategoryEnum.VideoEditing}}</option>
+                            <option>{{CategoryEnum.Photo}}</option>
+                            <option>{{CategoryEnum.graphics}}</option>
+                            <option>{{CategoryEnum.WebDesign}}</option>
+                        </select>
+                    </div>
+                    <div [hidden]="category.valid || category.pristine" class="alert alert-danger">
+                        Category is required </div>
+                </div> -->
+                <button type="submit" [disabled]="!ContactUsForm.valid"
+                    [ngStyle]="{'background-color': !ContactUsForm.valid?'white':'black','color': !ContactUsForm.valid?'black':'white' } ">send!</button>
+                <!-- <button class="w3-button w3-black w3-section w3-right" type="submit" '[disabled]="!ContactUsForm.valid"
+                [ngStyle]="{'background-color': !ContactUsForm.valid?'white':'black','color': !ContactUsForm.valid?'black':'white' } "' -->
+                <!-- >SEND</button> -->
+            </form>
+
+            <pre [hidden]="ContactUsForm.value">{{ContactUsForm.value | json}}</pre>
+        </div>
+    </div>
+</div>

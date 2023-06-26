@@ -1,0 +1,9 @@
+<form [formGroup]="addResponse" dir="rtl" [ngStyle]="{'text-align': 'center'} " (ngSubmit)="onSubmit()">
+  <input *ngIf="!send" type="text" formControlName="name" name="name" id="name" placeholder="name">
+  <input *ngIf="!send" type="text" formControlName="email" name="email" id="emil" placeholder="email">
+  <input *ngIf="!send" type="tel" formControlName="phone" name="phone" id="phone" placeholder="phone">
+  <input *ngIf="!send" type="text" formControlName="response" name="response" id="response" placeholder="your response">
+  <button *ngIf="!send" type="submit" (click)="gift()" [disabled]="!addResponse.valid"
+    [ngStyle]="{'background-color': !addResponse.valid?'white':'black' ,'color':!addResponse.valid?'black':'white','border-color': 'black','margin':'10px'} ">
+    send</button>
+</form>

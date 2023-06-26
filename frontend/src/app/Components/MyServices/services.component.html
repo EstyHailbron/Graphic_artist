@@ -1,0 +1,15 @@
+<div class="cards">
+  <div *ngFor="let item of ProffesionList ,let i = index">
+    <div class="card" [ngStyle]="{'width':'250px','height':'300px'}">
+      <img [ngStyle]="{'height':'240px'}" class="card-img-top" src="{{item.image}}" width="100%" alt="Card image">
+      <div class="card-body">
+        <h4 class="card-title">{{item.category}}</h4>
+        <button routerLink="details/{{item.description}}" class="w3-button w3-black w3-margin-bottom">for more
+          details</button>
+      </div>
+    </div>
+    <app-details [detailsInput]="item"></app-details>
+  </div>
+</div>
+<router-outlet></router-outlet>
+
