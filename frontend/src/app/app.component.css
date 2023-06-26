@@ -5,6 +5,7 @@ body {
 .mySlides {
     display: none
 }
+
 .cardsAllTheTimes {
     position: fixed;
     z-index: 3;
@@ -19,13 +20,12 @@ body {
 
 #menu {
     background-color: rgb(173, 5, 81) !important;
-    /* display: grid;
-    grid-template-columns: 8% 8% 8% 13% 15% 38% 10%; */
 }
 
 a {
     color: white !important;
 }
+
 #routerLink {
     padding-top: 10%;
 }

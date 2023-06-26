@@ -11,18 +11,19 @@ import { ServicesComponent } from './Components/MyServices/services.component';
 const routes: Routes =
   [
     { path: "about", component: AboutComponent },
-    { path: "services", component: ServicesComponent , children:[
-       { path: "details/:description", component: DetailsComponent }
-    ]},
+    {
+      path: "services", component: ServicesComponent, children: [
+        { path: "details/:description", component: DetailsComponent }
+      ]
+    },
     { path: "contactUs", component: ContactUsComponent },
-    { path: "customerResponse", component: CustomerResponseComponent , children:[
-     {path : "addResponse" , component:AddResponseComponent}
-    ]}
-
-
-
+    {
+      path: "customerResponse", component: CustomerResponseComponent, children: [
+        { path: "addResponse", component: AddResponseComponent }
+      ]
+    }
   ];
-
+  
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

@@ -16,7 +16,6 @@ export class AddResponseComponent implements OnInit ,OnDestroy{
 
   constructor(public httpSer:HttpServiceService) { }
   ngOnDestroy(): void {
-    // throw new Error('Method not implemented.');
   }
    
   ngOnInit(): void {

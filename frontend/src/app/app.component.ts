@@ -6,14 +6,14 @@ import { HttpServiceService } from './Services/http-service.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit,OnDestroy{
+export class AppComponent implements OnInit, OnDestroy {
   title = 'pyProject';
   today: number = Date.now();
-  gift:string="By adding a comment you are entitled to a gift";
+  gift: string = "By adding a comment you are entitled to a gift";
 
-  constructor(public httpSer: HttpServiceService){
-    this.httpSer.getGift().subscribe((n)=>{
-      this.gift=n;
+  constructor(public httpSer: HttpServiceService) {
+    this.httpSer.getGift().subscribe((n) => {
+      this.gift = n;
     })
   }
   ngOnDestroy(): void {
@@ -23,11 +23,11 @@ export class AppComponent implements OnInit,OnDestroy{
     throw new Error('Method not implemented.');
   }
 
- myFunction() {
-    var x : any= document.getElementById("navDemo");
+  myFunction() {
+    var x: any = document.getElementById("navDemo");
     if (x.className.indexOf("w3-show") == -1) {
       x.className += " w3-show";
-    } else { 
+    } else {
       x.className = x.className.replace(" w3-show", "");
     }
   }

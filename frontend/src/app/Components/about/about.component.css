@@ -1,9 +1,4 @@
-/* .bg1 {
-    background-position: center;
-    background-size: cover;
-    background-image: url("../assets/mac.jpg");
-    min-height: 100%;
-  } */
+
   body{
     background-color:black !important ;
   }
@@ -13,5 +8,4 @@
     background-size: cover;
     background-image: url("../../../assets/mac.jpg");
     min-height: 100%;
-    /* min-width: 100%; */
   }

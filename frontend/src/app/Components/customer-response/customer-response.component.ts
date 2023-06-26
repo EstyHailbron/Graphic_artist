@@ -27,11 +27,6 @@ export class CustomerResponseComponent implements OnInit, OnDestroy {
     this.httpSer.getAllFeedback().subscribe((data) => { this.feedBackList = data; console.log(data) }, (err) => { console.log(err) })
 
   }
-  // addLike(currentItem: feedBack) {
-  //   if (this.subscribe === false)
-  //   { this.httpSer.addLikes(currentItem).subscribe((data) => { this.feedBackList = data }, (err) => { console.log(err) })
-  //   this.subscribe = true;
-  // }
   addLike(currentItem: feedBack) {
     if (!currentItem.isClick)
       this.httpSer.addLikes(currentItem).subscribe((data) => { this.feedBackList = data }, (err) => { console.log(err) })

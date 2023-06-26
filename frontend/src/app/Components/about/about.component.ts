@@ -5,13 +5,11 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
   templateUrl: './about.Component.html',
   styleUrls: ['./about.component.css']
 })
-export class AboutComponent implements OnInit ,OnDestroy {
+export class AboutComponent implements OnInit, OnDestroy {
 
   constructor() { }
   ngOnDestroy(): void {
-    // throw new Error('Method not implemented.');
   }
-
   ngOnInit(): void {
   }
 

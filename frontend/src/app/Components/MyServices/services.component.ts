@@ -8,21 +8,20 @@ import { HttpServiceService } from 'src/app/Services/http-service.service';
   templateUrl: './services.component.html',
   styleUrls: ['./services.component.css']
 })
-export class ServicesComponent implements OnInit , OnDestroy{
+export class ServicesComponent implements OnInit, OnDestroy {
 
   ProffesionList: Array<SubProfession> = [];
   constructor(public httpSer: HttpServiceService) {
   }
   ngOnDestroy(): void {
-    // throw new Error('Method not implemented.');
   }
   ngOnInit(): void {
     this.httpSer.getAll().subscribe((data) => { this.ProffesionList = data }, (err) => { console.log(err) })
   }
 
-  
 
-  
+
+
 
 
 }

@@ -1,5 +1,3 @@
-<!-- <h2 [ngStyle]="{'text-align':'center','margin-top':'20px'}">customers says...</h2> -->
-<!-- <br> -->
 <div class="allFeedback" [ngStyle]="{}">
     <div>
         <input type="radio" name="colors" (click)="color='lightgreen'">Green
@@ -7,7 +5,7 @@
         <input type="radio" name="colors" (click)="color='cyan'">Cyan
     </div>
     <div id="highlight">
-        <p  [appHighlight]="color">clients says...</p>
+        <p [appHighlight]="color">clients says...</p>
     </div>
     <br>
     <div *ngFor="let item of feedBackList">
@@ -21,15 +19,12 @@
                     [ngStyle]="{'font-size':'3em','margin':'20px'}"></fa-icon></a>
 
             <h5>{{item.numOfLikes}}</h5>
-
             <hr>
             <hr>
             <hr>
-
         </div>
     </div>
 </div>
-
 <button class="addResponseButton" *ngIf="!send" (click)="click()" routerLink="addResponse"
     [ngStyle]="{'background-color':'white','margin-left':'12%'}">add response</button>
 <i class="suiiconfont sui_icon_like_completed_24px"></i>
